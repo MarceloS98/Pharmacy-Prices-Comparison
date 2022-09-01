@@ -1,0 +1,55 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Hamburguer Menu */
+.hamburguer {
+  cursor: pointer;
+  width: 24px;
+  height: 18px;
+  transition: all 0.25s;
+  position: relative;
+}
+
+.hamburguer-top,
+.hamburguer-middle,
+.hamburguer-bottom {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 24px;
+  height: 2px;
+  background: #fff;
+  transform: rotate(0);
+  transition: all 0.5s;
+}
+
+.hamburguer-middle {
+  transform: translateY(7px);
+}
+
+.hamburguer-bottom {
+  transform: translateY(14px);
+}
+
+.open {
+  transform: rotate(90deg);
+  transform: translateY(0px);
+}
+
+.open .hamburguer-top {
+  transform: rotate(45deg) translateY(6px) translate(6px);
+}
+
+.open .hamburguer-middle {
+  display: none;
+}
+
+.open .hamburguer-bottom {
+  transform: rotate(-45deg) translateY(6px) translate(-6px);
+}
+
+/* Table background */
+.product:nth-child(odd) {
+  background-color: rgba(0, 0, 0, 0.1);
+}
